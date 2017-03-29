@@ -1,0 +1,50 @@
+﻿body {
+}
+
+#header, #content, #sideBar {
+    display: block;
+}
+
+#header {
+    background-color: green;
+    border-bottom: 2px solid #111;
+    color: White;
+}
+
+#header, .title {
+    font-size: 1.5em;
+    padding: .5em;
+}
+
+#sideBar {
+    float: left;
+    width: 8em;
+    padding: .3em;
+}
+
+#content {
+    border-left: 2px solid gray;
+    margin-left: 10em;
+    padding: 1em;
+}
+
+.pager {
+    text-align: right;
+    padding: .5em 0 0 0;
+    margin-top: 1em;
+}
+
+    .pager A {
+        font-size: 1.1em;
+        color: #666;
+        padding: 0 .4em 0 .4em;
+    }
+
+        .pager A:hover {
+            background-color: Silver;
+        }
+
+        .pager A.selected {
+            background-color: #353535;
+            color: White;
+        }
