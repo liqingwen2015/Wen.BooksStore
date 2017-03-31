@@ -10,7 +10,9 @@
     <div id="header">
         <div class="title">图书商城</div>
     </div>
-    <div id="sideBar">分类</div>
+    <div id="sideBar">
+        @{ Html.RenderAction("Sidebar", "Nav"); }
+    </div>
     <div id="content">
         @RenderBody()
     </div>

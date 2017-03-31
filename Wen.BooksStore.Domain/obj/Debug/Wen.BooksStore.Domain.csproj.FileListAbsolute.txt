@@ -10,3 +10,15 @@ C:\Users\Wen\Desktop\Study\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\Entity
 C:\Users\Wen\Desktop\Study\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Wen\Desktop\Study\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\EntityFramework.xml
 C:\Users\Wen\Desktop\Study\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\Wen.BooksStore.Domain.dll.config
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\Wen.BooksStore.Domain.dll
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\Wen.BooksStore.Domain.pdb
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\System.Web.Mvc.dll
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\bin\Debug\System.Web.Mvc.xml
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\obj\Debug\Wen.BooksStore.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\obj\Debug\Wen.BooksStore.Domain.dll
+C:\Users\Wen\Documents\Projects\OpenSource\Wen.BooksStore\Wen.BooksStore.Domain\obj\Debug\Wen.BooksStore.Domain.pdb

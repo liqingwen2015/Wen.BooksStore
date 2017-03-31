@@ -15,8 +15,20 @@ namespace Wen.BooksStore.WebUI
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Book", action = "Details", id = UrlParameter.Optional }
+                url: "{controller}/{action}",
+                defaults: new { controller = "Book", action = "Details" }
+            );
+
+            routes.MapRoute(
+                name: null,
+                url: "{controller}/{action}/{category}",
+                defaults: new { controller = "Book", action = "Details" }
+            );
+
+            routes.MapRoute(
+                name: null,
+                url: "{controller}/{action}/{category}/{pageIndex}",
+                defaults: new { controller = "Book", action = "Details", pageIndex = UrlParameter.Optional }
             );
         }
     }

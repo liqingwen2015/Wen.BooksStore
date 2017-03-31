@@ -4,18 +4,11 @@
     ViewBag.Title = "Books";
 }
 
-
 @foreach (var item in Model.Books)
 {
-    <div>
-        <h3>@item.Name</h3>
-        @item.Description
-        <h4>@item.Price.ToString("C")</h4>
-        <br />
-        <hr />
-    </div>
+    Html.RenderPartial("_BookSummary", item);
 }
 
 <div class="pager">
-    @Html.PageLinks(Model, x => Url.Action("Details", new { pageIndex = x }))
+    @Html.PageLinks(Model, x => Url.Action("Details", new { pageIndex = x, category = Model.CurrentCategory }))
 </div>

@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#region
+
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Wen.BooksStore.Domain.Abstract;
 using Wen.BooksStore.WebUI.Models;
+
+#endregion
 
 namespace Wen.BooksStore.WebUI.Controllers
 {
@@ -21,16 +22,22 @@ namespace Wen.BooksStore.WebUI.Controllers
         /// <summary>
         /// 详情
         /// </summary>
-        /// <param name="pageIndex"></param>
+        /// <param name="category">分类</param>
+        /// <param name="pageIndex">页码</param>
         /// <returns></returns>
-        public ActionResult Details(int pageIndex = 1)
+        public ActionResult Details(string category, int pageIndex = 1)
         {
-            var model = new BookDetailsViewModels()
+            var model = new BookDetailsViewModels
             {
-                Books = _bookRepository.Books.OrderBy(x => x.Id).Skip((pageIndex - 1) * PageSize).Take(PageSize),
+                Books =
+                    _bookRepository.Books.Where(x => category == null || x.Category == category)
+                        .OrderBy(x => x.Id)
+                        .Skip((pageIndex - 1) * PageSize)
+                        .Take(PageSize),
+                CurrentCategory = category,
                 PageSize = PageSize,
                 PageIndex = pageIndex,
-                TotalItems = _bookRepository.Books.Count()
+                TotalItems = _bookRepository.Books.Count(x => category == null || x.Category == category)
             };
 
             return View(model);
