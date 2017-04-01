@@ -33,6 +33,7 @@ namespace Wen.BooksStore.WebUI.Infrastructure
         private void AddBindings()
         {
             _kernel.Bind<IBookRepository>().To<EfBookRepository>();
+            _kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>();
         }
     }
 }

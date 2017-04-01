@@ -1,0 +1,14 @@
+﻿@model Wen.BooksStore.Domain.Entities.Contact
+
+<div>
+    @using (Html.BeginForm())
+    {
+        <div class="error">@Html.ValidationSummary()</div>
+        <div>姓名： @Html.TextBoxFor(x => x.Name)</div>
+        <div>地址： @Html.TextBoxFor(x => x.Address)</div>
+        <div>邮箱： @Html.TextBoxFor(x => x.Email)</div>
+        <div><input type="submit" value="提交" /></div>
+    }
+
+</div>
+

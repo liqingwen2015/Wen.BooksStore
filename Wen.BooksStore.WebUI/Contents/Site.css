@@ -91,3 +91,13 @@
     .table th.spec, td.spec {
         border-left: 1px solid #C1DAD7;
     }
+
+.bookSummary {
+    width: 15%;
+    float: right;
+    margin-top: 1.5%;
+}
+
+.error {
+    color: red;
+}

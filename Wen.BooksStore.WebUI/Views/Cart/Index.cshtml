@@ -1,0 +1,53 @@
+﻿@model Wen.BooksStore.WebUI.Models.CartIndexViewModel
+
+<h2>我的购物车</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>书名</th>
+            <th>价格</th>
+            <th>数量</th>
+            <th>总计</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Cart.GetCartItems)
+        {
+            <tr>
+                <td>@item.Book.Name</td>
+                <td>@item.Book.Price</td>
+                <td>@item.Quantity</td>
+                <td>@((item.Book.Price * item.Quantity).ToString("C"))</td>
+                <td>
+                    @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                    {
+                        @Html.Hidden("id", item.Book.Id)
+                        @Html.HiddenFor(x => x.ReturnUrl)
+                        <input type="submit" value="- 移除" />
+                    }
+                </td>
+            </tr>
+        }
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td>总计：</td>
+            <td>@Model.Cart.ComputeTotalValue().ToString("C")</td>
+            <td>
+                @using (Html.BeginForm("Clear", "Cart"))
+                {
+                    @Html.HiddenFor(x => x.ReturnUrl)
+                    <input type="submit" value="清空购物车" />
+                }
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+<p>
+    <a href="@Model.ReturnUrl">继续购物</a>
+    @Html.ActionLink("结算","Checkout","Cart")
+</p>

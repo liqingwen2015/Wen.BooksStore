@@ -1,0 +1,6 @@
+﻿@model Wen.BooksStore.Domain.Entities.Cart
+
+<div class="bookSummary">
+    你的购物车：￥@Model.ComputeTotalValue() 
+    <span>@Html.ActionLink("结算", "Checkout", "Cart", new { retunUrl = Request.Url.PathAndQuery }, null)</span>
+</div>

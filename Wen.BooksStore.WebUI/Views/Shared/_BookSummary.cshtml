@@ -1,0 +1,19 @@
+﻿@model Wen.BooksStore.Domain.Entities.Book
+
+<div class="item">
+    <h3>@Model.Name</h3>
+    @Model.Description
+    <h4>@Model.Price.ToString("C")</h4>
+
+    @using (Html.BeginForm("AddToCart", "Cart"))
+    {
+        var id = Model.Id;
+        @Html.HiddenFor(x => id);
+        @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+
+        <input type="submit" value="+ 添加到购物车" />
+    }
+
+    <br />
+    <hr />
+</div>

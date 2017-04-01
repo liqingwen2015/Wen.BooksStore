@@ -1,0 +1,9 @@
+﻿@model IEnumerable<string>
+
+<ul>
+    <li>@Html.ActionLink("所有分类", "Details", "Book")</li>
+    @foreach (var item in Model)
+    {
+        <li>@Html.RouteLink(item, new { controller = "Book", action = "Details", category = item, pageIndex = 1 }, new { @class = item == ViewBag.CurrentCategory ? "selected" : null })</li>
+    }
+</ul>
