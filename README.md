@@ -7,3 +7,6 @@ http://www.cnblogs.com/liqingwen/p/6640861.html
 
 ## 一步步打造一个简单的 MVC 电商网站 - BooksStore（二）
 http://www.cnblogs.com/liqingwen/p/6647538.html
+
+## 一步步打造一个简单的 MVC 电商网站 - BooksStore（三）
+http://www.cnblogs.com/liqingwen/p/6652564.html
