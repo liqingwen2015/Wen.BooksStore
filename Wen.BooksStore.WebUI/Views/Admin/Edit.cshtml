@@ -1,0 +1,41 @@
+﻿@model Wen.BooksStore.Domain.Entities.Book
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>编辑</h2>
+
+<div>
+
+    <div>
+        @using (Html.BeginForm())
+        {
+            <div class="error">@Html.ValidationSummary()</div>
+
+            @Html.HiddenFor(x => x.Id)
+            <table>
+                <tr>
+                    <td>名称</td>
+                    <td>@Html.TextBoxFor(x => x.Name)</td>
+                </tr>
+                <tr>
+                    <td>价格</td>
+                    <td>@Html.TextBoxFor(x => x.Price)</td>
+                </tr>
+                <tr>
+                    <td>分类</td>
+                    <td>@Html.TextBoxFor(x => x.Category)</td>
+                </tr>
+                <tr>
+                    <td>描述</td>
+                    <td>@Html.TextAreaFor(x => x.Description)</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td><input type="submit" value="提交" /></td>
+                </tr>
+            </table>
+        }
+    </div>
+</div>

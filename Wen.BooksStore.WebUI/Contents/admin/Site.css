@@ -1,0 +1,41 @@
+﻿
+.table {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+    .table th {
+        font: bold 12px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+        color: #4f6b72;
+        border-right: 1px solid #C1DAD7;
+        border-bottom: 1px solid #C1DAD7;
+        border-top: 1px solid #C1DAD7;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 6px 6px 6px 12px;
+        background: #CAE8EA no-repeat;
+    }
+
+    .table td {
+        border-right: 1px solid #C1DAD7;
+        border-bottom: 1px solid #C1DAD7;
+        background: #fff;
+        font-size: 14px;
+        padding: 6px 6px 6px 12px;
+        color: #4f6b72;
+    }
+
+        .table td.alt {
+            background: #F5FAFA;
+            color: #797268;
+        }
+
+    .table th.spec, td.spec {
+        border-left: 1px solid #C1DAD7;
+    }
+
+.error {
+    color: red;
+}

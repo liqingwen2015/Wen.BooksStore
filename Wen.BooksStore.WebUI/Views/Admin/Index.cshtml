@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Wen.BooksStore.Domain.Entities.Book>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@if (TempData["msg"] != null)
+{
+    <div>@TempData["msg"]</div>
+}
+
+<p>
+    @Html.ActionLink("新增", "Edit")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            名称
+        </th>
+        <th>
+            描述
+        </th>
+        <th>
+            价格
+        </th>
+        <th>
+            分类
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.ActionLink("编辑", "Edit", new { id = item.Id })
+                @using (Html.BeginForm("Delete", "Admin", FormMethod.Post, new { style = "display:inline;" }))
+                {
+                    @Html.Hidden("id", item.Id)
+                    <input type="submit" value="删除" />
+                }
+            </td>
+        </tr>
+    }
+
+</table>

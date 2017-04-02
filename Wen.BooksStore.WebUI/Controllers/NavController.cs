@@ -23,7 +23,5 @@ namespace Wen.BooksStore.WebUI.Controllers
             var categories = _bookRepository.Books.Select(x => x.Category).Distinct().OrderBy(x => x);
             return PartialView(categories);
         }
-
-
     }
 }
