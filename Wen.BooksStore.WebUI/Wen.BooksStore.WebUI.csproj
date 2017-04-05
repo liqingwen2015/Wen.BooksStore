@@ -122,8 +122,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Contents\admin\Site.css" />
+    <Content Include="Contents\Login\css\htmleaf-demo.css" />
+    <Content Include="Contents\Login\css\normalize.css" />
+    <Content Include="Contents\Login\fonts\icomoon.svg" />
+    <Content Include="Contents\Login\index.html" />
+    <Content Include="Contents\Login\readme.html" />
+    <Content Include="Contents\Login\related\1.jpg" />
+    <Content Include="Contents\Login\related\2.jpg" />
     <Content Include="Contents\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Contents\Login\jQuery之家.url" />
+    <Content Include="Contents\Login\fonts\icomoon.eot" />
+    <Content Include="Contents\Login\fonts\icomoon.ttf" />
+    <Content Include="Contents\Login\fonts\icomoon.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -136,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CartController.cs" />
@@ -144,7 +156,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HtmlHelpers\PagingHelper.cs" />
+    <Compile Include="Infrastructure\Abstract\IAuthProvider.cs" />
+    <Compile Include="Infrastructure\Concrete\FormsAuthProvider.cs" />
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BookDetailsViewModels.cs" />
     <Compile Include="Models\CartViewModels.cs" />
     <Compile Include="Models\PagingInfo.cs" />
@@ -169,6 +184,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

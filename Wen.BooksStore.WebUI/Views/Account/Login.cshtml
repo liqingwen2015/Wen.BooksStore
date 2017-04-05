@@ -1,0 +1,151 @@
+﻿@model Wen.BooksStore.WebUI.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    @*<link href="~/Contents/Login/css/htmleaf-demo.css" rel="stylesheet" />*@
+    <style type="text/css">
+        @@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+        .login-page {
+            margin: auto;
+            padding: 8% 0 0;
+            width: 360px;
+        }
+
+        .form {
+            background: #FFFFFF;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            margin: 0 auto 100px;
+            max-width: 360px;
+            padding: 45px;
+            position: relative;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .form input {
+            background: #f2f2f2;
+            border: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            margin: 0 0 15px;
+            outline: 0;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .form button {
+            -webkit-transition: all 0.3 ease;
+            background: #4CAF50;
+            border: 0;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: "Microsoft YaHei", "Roboto", sans-serif;
+            font-size: 14px;
+            outline: 0;
+            padding: 15px;
+            text-transform: uppercase;
+            transition: all 0.3 ease;
+            width: 100%;
+        }
+
+        .form button:hover, .form button:active, .form button:focus { background: #43A047; }
+
+        .form .message {
+            color: #b3b3b3;
+            font-size: 12px;
+            margin: 15px 0 0;
+        }
+
+        .form .message a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .form .register-form { display: none; }
+
+        .container {
+            margin: 0 auto;
+            max-width: 300px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container:before, .container:after {
+            clear: both;
+            content: "";
+            display: block;
+        }
+
+        .container .info {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .container .info h1 {
+            color: #1a1a1a;
+            font-size: 36px;
+            font-weight: 300;
+            margin: 0 0 15px;
+            padding: 0;
+        }
+
+        .container .info span {
+            color: #4d4d4d;
+            font-size: 12px;
+        }
+
+        .container .info span a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .container .info span .fa { color: #EF3B3A; }
+
+        body {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            background: #76b852; /* fallback for old browsers */
+            background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+            background: -moz-linear-gradient(right, #76b852, #8DC26F);
+            background: -o-linear-gradient(right, #76b852, #8DC26F);
+            background: linear-gradient(to left, #76b852, #8DC26F);
+            font-family: "Roboto", sans-serif;
+        }
+    </style>
+    <!--[if IE]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+</head>
+<body>
+    <div id="wrapper" class="login-page">
+        <div id="login_form" class="form">
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "login-form" }))
+            {
+                <span style="float: left; color: red;">@Html.ValidationSummary()</span>
+                @Html.AntiForgeryToken()
+                @Html.TextBoxFor(x => x.UserName, new { placeholder = "用户名" })
+                @Html.EditorFor(x => x.Password, new { placeholder = "密码",  })
+
+                <input type="submit" value="登 录" />
+            }
+
+        </div>
+    </div>
+
+</body>
+</html>

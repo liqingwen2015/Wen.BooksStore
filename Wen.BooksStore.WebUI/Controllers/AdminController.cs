@@ -11,6 +11,7 @@ namespace Wen.BooksStore.WebUI.Controllers
     /// <summary>
     /// 后台管理控制器
     /// </summary>
+    [Authorize]
     public class AdminController : Controller
     {
         private readonly IBookRepository _bookRepository;

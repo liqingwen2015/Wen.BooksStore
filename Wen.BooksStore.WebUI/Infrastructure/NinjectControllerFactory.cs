@@ -7,6 +7,8 @@ using System.Web.Routing;
 using Ninject;
 using Wen.BooksStore.Domain.Abstract;
 using Wen.BooksStore.Domain.Concrete;
+using Wen.BooksStore.WebUI.Infrastructure.Abstract;
+using Wen.BooksStore.WebUI.Infrastructure.Concrete;
 
 namespace Wen.BooksStore.WebUI.Infrastructure
 {
@@ -34,6 +36,7 @@ namespace Wen.BooksStore.WebUI.Infrastructure
         {
             _kernel.Bind<IBookRepository>().To<EfBookRepository>();
             _kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>();
+            _kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
         }
     }
 }
